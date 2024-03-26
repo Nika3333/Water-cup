@@ -1,0 +1,454 @@
+/* Starter stuff */
+    *, *::before, *::after { box-sizing: border-box;}
+    h1, h2, h3, h4, h5, h6, ul, li, p { margin: 0; padding: 0;}
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        font-family: sans-serif, system-ui;
+        background: radial-gradient(circle, rgba(235,241,255,1) 0%, rgba(204,248,255,1) 55%, rgba(170,242,255,1) 77%, rgba(116,212,255,1) 100%);
+        position: relative;
+    }
+
+    :root {
+        --black-color: black;
+        --white-color: white;
+        --water-color: rgb(161, 212, 253);
+        --cup-glass-color: rgba(220, 220, 220, 0.5);
+        --cup-glass-border-color: rgba(130, 130, 130, 0.8);
+        --cup-top-border-color: rgba(230, 230, 230, 0.8);
+        --cup-highlight-color: rgba(255, 255, 255, 0.7);
+        --transition-300ms: 300ms;
+        --costume-darkblue: rgba(52, 52, 90, 0.7);
+        --bubble-border-color: rgba(41, 75, 90, 0.3);
+        --bubble-background-color: rgba(174, 229, 255, 0.7);
+        --bubble-highlight-color: rgba(255, 255, 255, 0.4);
+    }
+/* Actual code */
+/* Bubbles */
+    /* Bubble wrapper */
+    .bubble-wrapeer {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        /* background-color: aqua; */
+        /* animation: backgroundAnimation infinite 5s linear forwards; */
+    }
+
+    /* Bubble */
+    .bubble {
+        position: absolute;
+        border-radius: 100%;
+        border: 3px solid var(--bubble-border-color);
+        background-color: var(--bubble-background-color);
+    }
+
+    /* First bubble */
+    .bubble-first {
+        height: 150px;
+        width: 150px;
+        top: 10%;
+        left: 10%;
+        animation: bubbleAnimationThree infinite 5s linear forwards;
+    }
+
+    .bubble-highlight {
+        border-radius: 100%;
+        background-color: var(--bubble-highlight-color);
+        box-shadow: 0 0 15px var(--bubble-highlight-color);
+        position: absolute;
+    }
+
+    .bubble-first .highlight-first {
+        top: 10%;
+        left: 50%;
+        height: 30%;
+        width: 30%;
+    }
+
+    .bubble-first .highlight-second {
+        top: 45%;
+        left: 70%;
+        height: 15%;
+        width: 15%;
+    }
+
+    .bubble-first .highlight-theered {
+        height: 10%;
+        width: 10%;
+        bottom: 20%;
+        left: 20%;
+    }
+
+    /* Second bubble */
+    .bubble-second {
+        height: 75px;
+        width: 75px;
+        top: 30%;
+        left: 10%;
+        animation: bubbleAnimationTwo infinite 4s linear forwards;
+    }
+
+    .bubble-second .highlight-first {
+        top: 10%;
+        left: 50%;
+        height: 30%;
+        width: 30%;
+    }
+
+    .bubble-second .highlight-second {
+        height: 15%;
+        width: 15%;
+        bottom: 20%;
+        left: 40%;
+    }
+
+    /* Thereed bubble */
+    .bubble-theered {
+        height: 100px;
+        width: 100px;
+        bottom: 10%;
+        left: 10%;
+        animation: bubbleAnimationOne infinite 6s linear forwards;
+    }
+
+    .bubble-theered .highlight-first {
+        top: 15%;
+        left: 50%;
+        height: 30%;
+        width: 30%;
+    }
+
+    /* Fourth bubble */
+    .bubble-fourth {
+        height: 90px;
+        width: 90px;
+        bottom: 5%;
+        right: 40%;
+        animation: bubbleAnimationThree infinite 3s linear forwards;
+    }
+
+    .bubble-fourth .highlight-first {
+        top: 40%;
+        left: 10%;
+        height: 20%;
+        width: 20%;
+    }
+
+    .bubble-fourth .highlight-second {
+        top: 5%;
+        left: 30%;
+        height: 35%;
+        width: 35%;
+    }
+
+    /* Bubble fifth */
+    .bubble-fifth {
+        height: 60px;
+        width: 60px;
+        top: 5%;
+        right: 10%;
+        animation: bubbleAnimationTwo infinite 5s linear forwards;
+    }
+
+    .bubble-fifth .highlight-first {
+        top: 50%;
+        left: 10%;
+        height: 30%;
+        width: 30%;
+    }
+
+    /* Bubble sixth */
+    .bubble-sixth {
+        height: 100px;
+        width: 100px;
+        top: 15%;
+        right: 10%;
+        animation: bubbleAnimationOne infinite 6s linear forwards;
+    }
+
+    .bubble-sixth .highlight-first {
+        top: 50%;
+        left: 10%;
+        height: 30%;
+        width: 30%;
+    }
+
+    .bubble-sixth .highlight-second {
+        top: 80%;
+        left: 40%;
+        height: 15%;
+        width: 15%;
+    }
+
+    /* Bubble seventh */
+    .bubble-seventh {
+        height: 150px;
+        width: 150px;
+        top: 65%;
+        right: 5%;
+        animation: bubbleAnimationThree infinite 7s linear forwards;
+    }
+
+    .bubble-seventh .highlight-first {
+        top: 7%;
+        left: 20%;
+        height: 30%;
+        width: 30%;
+    }
+
+    .bubble-seventh .highlight-second{
+        top: 35%;
+        left: 7%;
+        height: 20%;
+        width: 20%;
+    } 
+
+    /* Bubble eight */
+    .bubble-eight {
+        height: 50px;
+        width: 50px;
+        top: 5%;
+        left: 55%;
+        animation: bubbleAnimationTwo infinite 5s linear forwards;
+    }
+
+    .bubble-eight .highlight-first {
+        top: 50%;
+        left: 10%;
+        height: 20%;
+        width: 20%;
+    }
+
+    .bubble-eight .highlight-second {
+        top: 70%;
+        left: 35%;
+        height: 25%;
+        width: 25%;
+    }
+
+    .bubble-eight .highlight-theered {
+        top: 15%;
+        left: 55%;
+        height: 20%;
+        width: 20%;
+    }
+
+/* Main Code */
+    .main-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .positional-wrapper {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 1;
+        gap: 1rem;
+    }
+
+/* Cup & Water */
+    .cup-positional-wrapper {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Cup wrapper */
+    .cup-main-wrapper {
+        height: 600px;
+        width: 300px;
+    }
+
+    /* Cup */
+    .cup {
+        height: 100%;
+        width: 100%;
+        border-radius: 3px 3px 15% 15%;
+        position: relative;
+        overflow: hidden;
+        border-bottom: var(--cup-glass-border-color) 10px solid;
+        border-right: var(--cup-glass-border-color) 10px solid;
+        border-left: var(--cup-glass-border-color) 10px solid;
+        border-top: var(--cup-top-border-color) 5px solid;
+        background-color: var(--cup-glass-color);
+    }
+
+    /* Cup highlights */
+    .cup::before {
+        content: '';
+        position: absolute;
+        height: 700px;
+        width: 25px;
+        rotate: 10deg;
+        top: -10px;
+        background-color: var(--cup-highlight-color);
+        left: 25%;
+        z-index: 1;
+    }
+
+    .cup::after {
+        content: '';
+        position: absolute;
+        height: 700px;
+        width: 15px;
+        rotate: 10deg;
+        top: -10px;
+        background-color: var(--cup-highlight-color);
+        left: 40%;
+        z-index: 1;
+    }
+
+    /* Water */
+    .water {
+        height: 90%; /* Deafult water height value */ 
+        width: 100%;
+        background-color: var(--water-color);
+        position: absolute;
+        bottom: 0;
+        transition: var(--transition-300ms);
+    }
+
+    #display-current-water-level {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        font-size: 3rem;
+        color: var(--costume-darkblue);
+    }
+
+/* Buttons */
+    .btn-main-wrapper {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+
+        h1 {
+            font-family: sans-serif;
+        }
+    }
+
+    .btn-inside-wrapper {
+        height: 15%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        place-items: center;
+        gap: 1rem;
+    }
+    
+    .btn {
+        border-radius: 10px;
+        border: 3px solid var(--costume-darkblue);
+        background-color: var(--water-color);
+        font-size: 1.25rem;
+        color: var(--costume-darkblue);
+        cursor: pointer;
+        width: 160px;
+        height: 60px;
+        transition: var(--transition-300ms);
+
+        &:hover {
+            scale: 1.05;
+        }
+    }
+
+/* Media */
+    @media screen and (max-width: 900px) {
+        .positional-wrapper {
+            flex-direction: column;
+            width: 100%;
+            height: 80%;
+        }
+
+        .cup-main-wrapper {
+            height: 400px;
+            width: 200px;
+        }
+    }
+
+/* Keyframe animation */
+    @keyframes bubbleAnimationOne {
+        0% {
+            transform: translate(0%, 0%) rotate(0deg);
+        }
+
+        20% {
+            transform: translate(10%, 10%) rotate(0deg);
+        }
+
+        40% {
+            transform: translate(30%, 20%) rotate(10deg);
+        }
+
+        60% {
+            transform: translate(20%, 10%) rotate(15deg);
+        }
+
+        80% {
+            transform: translate(-20%, -10%) rotate(10deg);
+        }
+    }
+
+    @keyframes bubbleAnimationTwo {
+        0% {
+            transform: translate(0%, 0%) rotate(0deg);
+        }
+
+        20% {
+            transform: translate(-15%, 15%) rotate(-5deg);
+        }
+
+        40% {
+            transform: translate(-25%, 25%) rotate(-15deg);
+        }
+
+        60% {
+            transform: translate(-30%, 10%) rotate(-10deg);
+        }
+
+        80% {
+            transform: translate(10%, -10%) rotate(-5deg);
+        }
+    }
+
+    @keyframes bubbleAnimationThree {
+        0% {
+            transform: translate(0%, 0%) rotate(0deg);
+        }
+
+        20% {
+            transform: translate(10%, -20%) rotate(3deg);
+        }
+
+        40% {
+            transform: translate(30%, -30%) rotate(13deg);
+        }
+
+        60% {
+            transform: translate(15%, -20%) rotate(15deg);
+        }
+
+        80% {
+            transform: translate(-15%, 15%) rotate(7deg);
+        }
+    }
