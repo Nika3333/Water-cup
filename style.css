@@ -4,11 +4,12 @@
     body {
         margin: 0;
         padding: 0;
-        height: 100vh;
+        min-height: 100vh;
+         min-height: 100svh;
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: auto;
+        overflow: hidden;
         font-family: sans-serif, system-ui;
         background: radial-gradient(circle, rgba(235,241,255,1) 0%, rgba(204,248,255,1) 55%, rgba(170,242,255,1) 77%, rgba(116,212,255,1) 100%);
         position: relative;
